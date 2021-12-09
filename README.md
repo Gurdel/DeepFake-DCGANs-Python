@@ -108,6 +108,7 @@ x = x[indices]
 Real data samples after filtering:
 
 ![img.png](./images/mnist_3.png)
+
 ###3) generator model
 Let's build generator model. Input data is vector of random normal 
 distributed values with length 128. There are 5 Conv2DTranspose layers in the 
@@ -184,6 +185,7 @@ Total params: 6,952,257
 Trainable params: 6,950,337
 
 Non-trainable params: 1,920
+
 ###5) DCGAN
 For building GAN, I just need to place generator output to discriminator input 
 and check the accuracy of results. To check the accuracy of the model, I use 
@@ -210,6 +212,7 @@ Total params: 13,969,986
 Trainable params: 7,015,809
 
 Non-trainable params: 6,954,177
+
 ###6) train model
 Now we can train our model. For this example it's enough to train model for 50 epochs, 
 but for more complex dataset we need more epochs. Every training batch contains 128 
