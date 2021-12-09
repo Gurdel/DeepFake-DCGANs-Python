@@ -14,7 +14,7 @@ Notebooks with last DCGAN models are gan_last.ipynb (MNIST) and gan_color.ipynb
 >>- train model
 >3. Use other datasets
 >4. Third-party GANs
----
+___
 ##Introduction
 Deep fake (also spelled deepfake) is a type of artificial intelligence used to 
 create convincing images, audio and video hoaxes. The term, which describes both 
@@ -54,7 +54,7 @@ For more detailed information about all layers I used in this work it’s better
 read official TensorFlow documentation: 
 https://www.tensorflow.org/api_docs/python/tf/keras/layers.
 
----
+___
 ##Build your own DCGAN
 ###1) import modules
 ```python
@@ -273,7 +273,7 @@ generator decreases and vice versa.
 
 ![img3.png](./images/loss.png)
 ![img3.png](./images/acc.png)
-
+___
 ##Use other datasets
 As you can see, for one of MNIST number we got good results. We can 
 change number for generating. For example, for zeros I got next 
@@ -301,7 +301,7 @@ that are less difficult and can be used for helping with the training process.
 I am not satisfied with results. I got the outlines of the desired numbers, 
 but they are very easy to distinguish from the original. Perhaps the model 
 just needs more epochs to train, but I don't have enough computing power.
-
+___
 ##Third-party GANs
 
 
