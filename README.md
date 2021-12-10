@@ -7,16 +7,16 @@ Notebooks with last DCGAN models are gan_last.ipynb (MNIST) and gan_color.ipynb
 
 ## Agenda
 
->1. Introduction
->2. Build your own DCGAN: [Managed Disks](#Build-your-own-DCGAN)
->>- import modules
->>- download dataset
->>- generator model
->>- discriminator model
->>- DCGAN
->>- train model
->3. Use other datasets
->4. Third-party GANs
+>1. [Introduction](#Introduction)
+>2. [Build your own DCGAN:](#Build-your-own-DCGAN)
+>>- [import modules](#1-import-modules)
+>>- [download dataset](#2-download-dataset)
+>>- [generator model](#3-generator-model)
+>>- [discriminator model](#4-discriminator-model)
+>>- [DCGAN](#5-DCGAN)
+>>- [train model](#6-train-model)
+>3. [Use other datasets](#Use-other-datasets)
+>4. [Third-party GANs](#Third-party-GANs)
 ___
 ## Introduction
 
