@@ -4,11 +4,16 @@ Deepfake image generation using own and third-party GAN
 
 Notebooks with last DCGAN models are gan_last.ipynb (MNIST) and gan_color.ipynb 
 (AVHN). Other files named dcgan* are previous version with another GAN models.
-##Agenda
+
+Build your own DCGAN: [Build your own DCGAN1](##Build your own DCGAN)
+
+import modules[Build your own DCGAN2](#Build your own DCGAN)
+
+## Agenda
 
 >1. Introduction
->2. Build your own DCGAN:
->>- import modules
+>2. Build your own DCGAN: [Managed Disks](##Build your own DCGAN)
+>>- import modules[Managed ssDisks](#Build your own DCGAN)
 >>- download dataset
 >>- generator model
 >>- discriminator model
@@ -17,7 +22,7 @@ Notebooks with last DCGAN models are gan_last.ipynb (MNIST) and gan_color.ipynb
 >3. Use other datasets
 >4. Third-party GANs
 ___
-##Introduction
+## Introduction
 
 Deep fake (also spelled deepfake) is a type of artificial intelligence used to 
 create convincing images, audio and video hoaxes. The term, which describes both 
@@ -58,9 +63,9 @@ read official TensorFlow documentation:
 https://www.tensorflow.org/api_docs/python/tf/keras/layers.
 
 ___
-##Build your own DCGAN
+## Build your own DCGAN
 
-###1) import modules
+### 1) import modules
 
 ```python
 import tensorflow as tf
@@ -73,7 +78,7 @@ from tensorflow.keras.layers import Conv2DTranspose, Reshape, LeakyReLU
 from tensorflow.keras.models import Model, Sequential
 from time import time
 ```
-###2) download dataset
+### 2) download dataset
 
 The first and main dataset for my work is MNIST database of handwritten digits,
 has a training set of 60,000 examples, and a test set of 10,000 examples. 
@@ -115,7 +120,7 @@ Real data samples after filtering:
 
 ![img.png](./images/mnist_3.png)
 
-###3) generator model
+### 3) generator model
 
 Let's build generator model. Input data is vector of random normal 
 distributed values with length 128. There are 5 Conv2DTranspose layers in the 
@@ -156,7 +161,7 @@ You can experiment yourself with the structure of the model, the number of
 layers and their parameters. The main thing is that the output of the generator 
 matches the input data of the dataset into the classifier.
 
-###4) discriminator model
+### 4) discriminator model
 
 Now we can build the discriminator model. I chose next configuration:
 ```python
@@ -194,7 +199,7 @@ Trainable params: 6,950,337
 
 Non-trainable params: 1,920
 
-###5) DCGAN
+### 5) DCGAN
 
 For building GAN, I just need to place generator output to discriminator input 
 and check the accuracy of results. To check the accuracy of the model, I use 
@@ -222,7 +227,7 @@ Trainable params: 7,015,809
 
 Non-trainable params: 6,954,177
 
-###6) train model
+### 6) train model
 
 Now we can train our model. For this example it's enough to train model for 50 epochs, 
 but for more complex dataset we need more epochs. Every training batch contains 128 
@@ -287,7 +292,7 @@ generator decreases and vice versa.
 ![img3.png](./images/loss.png)
 ![img3.png](./images/acc.png)
 ___
-##Use other datasets
+## Use other datasets
 
 As you can see, for one of MNIST number we got good results. We can 
 change number for generating. For example, for zeros I got next 
@@ -316,7 +321,7 @@ I am not satisfied with results. I got the outlines of the desired numbers,
 but they are very easy to distinguish from the original. Perhaps the model 
 just needs more epochs to train, but I don't have enough computing power.
 ___
-##Third-party GANs
+## Third-party GANs
 
 
 
