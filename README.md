@@ -5,15 +5,11 @@ Deepfake image generation using own and third-party GAN
 Notebooks with last DCGAN models are gan_last.ipynb (MNIST) and gan_color.ipynb 
 (AVHN). Other files named dcgan* are previous version with another GAN models.
 
-Build your own DCGAN: [Build your own DCGAN1](##Build your own DCGAN)
-
-import modules[Build your own DCGAN2](#Build your own DCGAN)
-
 ## Agenda
 
 >1. Introduction
->2. Build your own DCGAN: [Managed Disks](##Build your own DCGAN)
->>- import modules[Managed ssDisks](#Build your own DCGAN)
+>2. Build your own DCGAN: [Managed Disks](#Build-your-own-DCGAN)
+>>- import modules
 >>- download dataset
 >>- generator model
 >>- discriminator model
