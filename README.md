@@ -17,7 +17,27 @@ Notebooks with last DCGAN models are gan_last.ipynb (MNIST) and gan_color.ipynb
 >>- [train model](#6-train-model)
 >3. [Use other datasets](#Use-other-datasets)
 >4. [Third-party GANs](#Third-party-GANs)
+>>- [StyleGAN](#stylegan)
+>>- [Pretrained StyleGAN](#pretrained-stylegan)
+>>- [StyleGAN2](#StyleGAN2)
+>>- [Pretrained StyleGAN2](#Pretrained-StyleGAN2)
+>>- [StyleGAN2 + ADA](#stylegan2--ada)
+>>- [Lightweight GAN](#Lightweight-GAN)
+>>- [Pretrained GANs with Tensorflow](#pretrained-gans-with-tensorflow)
 >5. [Deepfake Websites](#Deepfake-Websites)
+>>- [AutoDraw](#autodraw---how-to-make-a-doodle-drawing)
+>>- [Quick, Draw!](#quick-draw)
+>>- [ThisPersonDoesNotExist](#thispersondoesnotexist---generate-a-person)
+>>- [Sematris](#sematris---neurotetris)
+>>- [Floom](#Floom)
+>>- [cleanup.pictures](#cleanup.pictures)
+>>- [ThisCatDoesNotExist](#thiscatdoesnotexist---create-a-cat)
+>>- [remove.bg](#removebg---remove-the-background-from-the-photo)
+>>- [Teachable Machine](#teachable-machine---independently-train-a-neural-network)
+>>- [gnod.com](#gnodcom---finding-a-movie-for-the-evening-is-no-longer-a-problem)
+>>- [Artbreeder](#artbreeder---generates-random-faces-abstractions-covers-and-landscapes)
+>>- [Dream neural network](#dream-neural-network---generates-pictures-by-text-request)
+
 ___
 ## Introduction
 
@@ -288,6 +308,7 @@ generator decreases and vice versa.
 
 ![img3.png](./images/loss.png)
 ![img3.png](./images/acc.png)
+
 ___
 ## Use other datasets
 
@@ -317,6 +338,7 @@ that are less difficult and can be used for helping with the training process.
 I am not satisfied with results. I got the outlines of the desired numbers, 
 but they are very easy to distinguish from the original. Perhaps the model 
 just needs more epochs to train, but I don't have enough computing power.
+
 ___
 ## Third-party GANs
 
@@ -410,6 +432,7 @@ https://github.com/kozistr/Awesome-GANs
 
 You can download pre-trained models from Google Drive
 
+___
 ## Deepfake Websites
 
 ### AutoDraw - how to make a doodle drawing
