@@ -17,6 +17,7 @@ Notebooks with last DCGAN models are gan_last.ipynb (MNIST) and gan_color.ipynb
 >>- [train model](#6-train-model)
 >3. [Use other datasets](#Use-other-datasets)
 >4. [Third-party GANs](#Third-party-GANs)
+>5. [Deepfake Websites](#Deepfake-Websites)
 ___
 ## Introduction
 
@@ -318,6 +319,233 @@ but they are very easy to distinguish from the original. Perhaps the model
 just needs more epochs to train, but I don't have enough computing power.
 ___
 ## Third-party GANs
+
+As you can see, this DCGAN works poorly for complex examples. Therefore, it is 
+better to use ready-made tested more complex solutions. I will list them below. 
+I'll leave links to their documentation. It makes no sense to write examples of 
+their use myself, since it will just be a copy and paste of the documentation.
+
+### StyleGAN
+
+A Style-Based Generator Architecture for Generative Adversarial Network
+
+StyleGAN — Official TensorFlow Implementation: https://github.com/NVlabs/stylegan
+
+An alternative generator architecture for generative adversarial networks, 
+borrowing from style transfer literature. The new architecture leads to an 
+automatically learned, unsupervised separation of high-level attributes (e.g., 
+pose and identity when trained on human faces) and stochastic variation in the 
+generated images (e.g., freckles, hair), and it enables intuitive, scale-specific 
+control of the synthesis. The new generator improves the state-of-the-art in terms 
+of traditional distribution quality metrics, leads to demonstrably better interpolation 
+properties, and also better disentangles the latent factors of variation. To quantify 
+interpolation quality and disentanglement, we propose two new, automated methods that are 
+applicable to any generator architecture. Finally, we introduce a new, highly 
+varied and high-quality dataset of human faces.
+
+### Pretrained StyleGAN
+
+https://github.com/justinpinkney/awesome-pretrained-stylegan
+
+A collection of pre-trained StyleGAN models trained on different 
+datasets at different resolution to download.
+
+### StyleGAN2
+
+Analyzing and Improving the Image Quality of StyleGAN
+
+StyleGAN2 — Official TensorFlow Implementation: https://github.com/NVlabs/stylegan2
+
+The style-based GAN architecture (StyleGAN) yields state-of-the-art results in data-driven 
+unconditional generative image modeling. We expose and analyze several of its characteristic 
+artifacts, and propose changes in both model architecture and training methods to address
+them. In particular, we redesign the generator normalization, revisit progressive growing,
+and regularize the generator to encourage good conditioning in the mapping from latent codes 
+to images. In addition to improving image quality, this path length regularizer yields the 
+additional benefit that the generator becomes significantly easier to invert. This makes it
+possible to reliably attribute a generated image to a particular network. We furthermore 
+visualize how well the generator utilizes its output resolution, and identify a capacity 
+problem, motivating us to train larger models for additional quality improvements. Overall, 
+our improved model redefines the state of the art in unconditional image modeling, both in 
+terms of existing distribution quality metrics as well as perceived image quality.
+
+### Pretrained StyleGAN2
+
+https://github.com/justinpinkney/awesome-pretrained-stylegan2
+
+A collection of pre-trained StyleGAN2 models trained on different datasets at 
+different resolution to download.
+
+### StyleGAN2 + ADA
+
+Training Generative Adversarial Networks with Limited Data
+
+StyleGAN2 with adaptive discriminator augmentation (ADA) - 
+Official TensorFlow implementation: https://github.com/NVlabs/stylegan2-ada
+
+Training generative adversarial networks (GAN) using too little data typically leads to 
+discriminator overfitting, causing training to diverge. We propose an adaptive discriminator 
+augmentation mechanism that significantly stabilizes training in limited data regimes. The 
+approach does not require changes to loss functions or network architectures, and is 
+applicable both when training from scratch and when fine-tuning an existing GAN on another 
+dataset. We demonstrate, on several datasets, that good results are now possible using only 
+a few thousand training images, often matching StyleGAN2 results with an order of magnitude
+fewer images. We expect this to open up new application domains for GANs. We also find that 
+the widely used CIFAR-10 is, in fact, a limited data benchmark, and improve the record FID 
+from 5.59 to 2.42.
+
+### Lightweight GAN
+
+https://github.com/lucidrains/lightweight-gan
+
+Implementation of 'lightweight' GAN proposed in ICLR 2021, in Pytorch. The main 
+contributions of the paper is a skip-layer excitation in the generator, paired
+with autoencoding self-supervised learning in the discriminator. Quoting the 
+one-line summary "converge on single gpu with few hours' training, on 1024 
+resolution sub-hundred images".
+
+### Pretrained GANs with Tensorflow
+
+https://github.com/kozistr/Awesome-GANs
+
+You can download pre-trained models from Google Drive
+
+## Deepfake Websites
+
+### AutoDraw - how to make a doodle drawing
+
+https://www.autodraw.com/ 
+
+Artificial Intelligence and Machine Learning are helping to turn sloppy 
+sketches into crisp, rendered images. The user only needs to draw a few 
+lines on the canvas for the algorithm to suggest the planned drawing.
+Artificial intelligence compares images from an extensive database and 
+selects the appropriate options.
+
+### Quick, Draw! 
+
+https://quickdraw.withgoogle.com/
+
+A very fun neuro-game. The user creates drawings and 
+prompts Google's algorithms to guess what they mean.
+The learning model improves as the number of guessed images increases. The
+model answers in Russian, sometimes very funny
+
+### ThisPersonDoesNotExist - generate a person
+
+https://thispersondoesnotexist.com/
+
+The neural network creates a realistic image of a human face. 
+A new image appears every time you open or refresh the page. 
+The algorithm is based on Nvidia's StyleGAN generative neural network.
+
+### Sematris - neurotetris
+
+https://research.google.com/semantris/
+
+Google's minigame works in two ways: Thoughtful Tetris or Intense Arcade.
+
+In the first case, you need to write a related word to one of those presented in 
+the list, and the neural network will try to guess which of these words it fits.
+
+In the second, choose a word close in meaning to the variant proposed by the
+algorithm. For example, match the word "sleep" with the word "bed". The more
+matches, the more points the user gets. Correct word between blocks leads to 
+block deletion
+
+### Floom
+
+https://floom.withgoogle.com/
+
+What happens if you drill a hole right under your feet to the other end 
+of the planet?
+
+### cleanup.pictures
+
+https://cleanup.pictures/
+
+The neural network from cleanup.pictures will remove unnecessary items from image, 
+you just need to draw the required area with the cursor.
+
+### ThisCatDoesNotExist - create a cat
+
+https://thiscatdoesnotexist.com/
+
+The ThisPersonDoesNotExist project has a logical 
+continuation.
+
+Artificial intelligence generates an image of a cat based on the knowledge 
+it has gained by analyzing real animal images.
+
+To get an image of a cat, just refresh the website page.
+
+### remove.bg - remove the background from the photo
+
+https://www.remove.bg/
+
+The service allows you to remove the background from a photo in five seconds 
+without using graphic editors. Using algorithms, the application selects 
+objects in the foreground and removes unnecessary.
+
+### Teachable Machine - independently train a neural network
+
+https://teachablemachine.withgoogle.com/
+
+Teach your computer to recognize images, sounds and poses.
+
+Want to understand how a neural network works? Be sure to test this 
+service! Google developers have created an application that will help 
+you understand how neural networks work. To conduct the experiment, you will 
+need a device with a working webcam and an object to which the new neural 
+network will respond.
+
+Artificial intelligence will remember your movements and match them 
+with a programmed response, responding to gestures with a GIF image, 
+sound or speech.
+
+### gnod.com - finding a movie for the evening is no longer a problem!
+
+https://www.gnovies.com/
+
+This artificial intelligence will plan your leisure time. List your 
+favorite musicians, writers or artists and Gnod will suggest other 
+people's creations that match your tastes. The same works with TV shows, 
+films or cartoons.
+
+### Artbreeder - generates random faces, abstractions, covers and landscapes
+
+https://www.artbreeder.com/
+
+The service has a variety of tools, it is divided into the following sections:
+
+1. "General" - is a mixing of several images. For example, mix images 
+   of a burger and a dog. Most of the time, the mixing result is pretty creepy.
+
+2. "Portraits" - this is the strongest side of the service. In this section, 
+   you can not only mix images with each other, but also change the structure 
+   of a person's portrait: physique, age, gender, mood, realistic / drawn facial 
+   outlines, and so on. The result is almost always impressive.
+
+3. "Albums" is the generation of abstract images in the manner of music album 
+   covers.
+
+4. "Landscapes" - the section works similarly to the others, but here the 
+   emphasis is on landscapes. Surreal landscapes come out best here.
+
+### Dream neural network - generates pictures by text request
+
+https://app.wombo.art/
+
+It turns out abstractly, but quickly and almost always beautiful
+
+The service is designed to create unique wallpapers for a smartphone, but in social networks 
+it is used for illustrations for books, comics and dissertations.
+
+To generate a picture, it is enough to enter a short description in English, select one of the
+styles (or the item "without a specific style") and click the "Create" button. The whole process
+takes just a couple of minutes, after which the finished image is displayed on a separate page in a stylized frame.
+
+
 
 
 
